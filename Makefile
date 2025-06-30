@@ -31,5 +31,5 @@ frequency:
 	cabal run frequency-bin
 
 setup: dirs extract frequency
-	@printf "$(GREEN)The bag of words has been successfully created for both HAM (data/ham-frequency.txt) and SPAM (data/spam-frequency.txt).$(RESET)"
-	@printf "$(GREEN)Now execute \`make run\` to check whether a text is spam or not.$(RESET)"
+	@printf "$(GREEN)1. The bag of words has been successfully created for both HAM (data/ham-frequency.txt) and SPAM (data/spam-frequency.txt).$(RESET)\n"
+	@printf "$(GREEN)2. Now execute \`make run\` to check whether a text is spam or not.$(RESET)\n"

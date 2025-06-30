@@ -1,0 +1,45 @@
+cabal-version:      3.0
+name:               vadikatti
+version:            0.1.0.0
+-- synopsis:
+-- description:
+license:            BSD-3-Clause
+license-file:       LICENSE
+author:             RahulNavneeth
+maintainer:         rahulmnavneeth@gmail.com
+-- copyright:
+category:           Text
+build-type:         Simple
+-- extra-source-files:
+
+common warnings
+    ghc-options: -Wall
+
+library
+    hs-source-dirs:   src
+    exposed-modules:  Frequency
+    build-depends:    base ^>=4.19.2.0,
+					  text,
+					  filepath,
+					  containers,
+                      directory
+    default-extensions: InstanceSigs
+    default-language: Haskell2010
+
+executable frequency-bin
+    import:           warnings
+    main-is:          FrequencyMain.hs
+    hs-source-dirs:   app
+    build-depends:    base,
+                      vadikatti
+    default-language: Haskell2010
+
+executable vadikatti
+    import:           warnings
+    main-is:          Main.hs
+    -- other-modules:
+    -- othes-extensions:
+    build-depends:    base ^>=4.19.2.0,
+                      vadikatti
+    hs-source-dirs:   app
+    default-language: Haskell2010

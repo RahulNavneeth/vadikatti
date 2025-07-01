@@ -15,6 +15,7 @@
 					ghc
 				 	cabal-install
 					zsh
+					wget
 					gnumake
 				];
 

@@ -17,18 +17,19 @@ common warnings
 
 library
     hs-source-dirs:   src
-    exposed-modules:  Frequency
+    exposed-modules:  Bow
     build-depends:    base ^>=4.19.2.0,
 					  text,
 					  filepath,
+                      bytestring,
 					  containers,
                       directory
     default-extensions: InstanceSigs
     default-language: Haskell2010
 
-executable frequency-bin
+executable bow-bin
     import:           warnings
-    main-is:          FrequencyMain.hs
+    main-is:          BowMain.hs
     hs-source-dirs:   app
     build-depends:    base,
                       vadikatti
@@ -40,6 +41,8 @@ executable vadikatti
     -- other-modules:
     -- othes-extensions:
     build-depends:    base ^>=4.19.2.0,
+					  text,
+					  containers,
                       vadikatti
     hs-source-dirs:   app
     default-language: Haskell2010

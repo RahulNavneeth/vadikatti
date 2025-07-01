@@ -10,7 +10,7 @@ RESET = \\033[0m
 .PHONY: dirs setup clean
 
 run:
-	@printf "$(YELLOW)In development :0$(RESET)\n"
+	cabal run vadikatti
 
 clean:
 	rm -rf $(DATA_DIR)
@@ -27,8 +27,9 @@ $(EXTRACTED_FILE):
 extract: $(EXTRACTED_FILE)
 
 frequency:
-	cabal build frequency-bin
-	cabal run frequency-bin
+	cabal update
+	cabal build
+	cabal run bow-bin
 
 setup: dirs extract frequency
 	@printf "$(GREEN)1. The bag of words has been successfully created for both HAM (data/ham-frequency.txt) and SPAM (data/spam-frequency.txt).$(RESET)\n"
